@@ -1,0 +1,110 @@
+//main nav
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    margin-right: 3rem;
+
+
+    &__logo {
+        width: 100px;
+        height: 100px;
+        transition: all 0.6s;
+    }
+
+    &__logo:hover {
+        scale: 1.2;
+        transition: all 0.6s;
+    }
+
+
+    &__items {
+        display: flex;
+
+        li {
+            padding: 0.5rem 1.5rem;
+
+            a {
+                text-decoration: none;
+                color:$primary-color;
+                text-transform: lowercase;
+                border-bottom: 3px transparent solid;
+                padding: 0.7rem 0rem;
+                transition: border-color .5s;
+                font-size:large;
+                border-radius: 7px;
+                margin: 20px 0px;
+                border-color: #DAA520;
+                transition: all .6s;
+                
+                &:hover{
+                    border-radius: 20px;
+                    font-size:x-large;
+                    transition: all .4s;
+                    ;
+
+                }
+                &:active{
+                    border-color: $second-color;
+                }
+            }
+        }
+    }
+}
+
+#header{
+    &__home {
+        background: linear-gradient(rgba(0,0,0,0.4),#000), url(../img/bg.jpg) no-repeat center center/cover ;
+
+        height: 100vh;
+        color: $primary-color ;
+        border-radius: 15px;
+
+
+        .header-content {
+            text-align: center;
+            padding-top: 10%;   
+        }
+        h1 {
+            font-size:4rem ;
+            line-height: 1.2;
+        }
+        .typewrite{
+            display:block
+        }
+    }
+
+    &__inner {
+        background:  $bg-image no-repeat 40% 20% /cover ;
+        height: 8rem;
+        border-bottom: 3px solid $primary-color;
+    }
+}
+
+
+.sm_header{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: 6rem;
+    margin-top: 3.2rem;
+}
+
+.sm_header div{
+    display: inline-block;
+    margin: 0.1rem;
+}
+
+.sm_header div a{
+    display: inline-flex;
+    margin: 5px;
+    color: $second-color;
+}
+
+.sm_header div a:hover{
+    background: transparent;
+    color: #dca825;
+    scale: 1.15;
+    transition: all 0.3s;
+}

@@ -1,0 +1,61 @@
+#projects{
+    .container{
+        margin-top: 1.5rem;
+
+        
+        .items{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+            box-shadow: rgba(149 ,154 ,145 , .2) 0px 8px 24px ;
+
+                .item{
+                    border-radius: .5rem;
+                    position: relative;
+                    background-color: #777777;
+                    overflow: hidden;
+
+                    &::after {
+                        border-radius: .5rem;
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        background-color: #000;
+                        opacity: .3;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        transform: translateX(0) translateY(0);
+                        transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+                    }
+
+                    &:hover::after {
+                        transform: translateX(100%) translateY(-30%) rotate(45deg);
+                        transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                        opacity: .9;
+                    }
+
+                    img{
+                        border-radius: 1rem
+                    }
+
+                    h2{
+                        color: #fff;
+                        margin-bottom: .5rem;
+                    }
+
+                    p{
+                        color: #efefef;
+                    }
+
+                    
+                }
+        }
+    }
+}
+
+footer{
+    margin: 2rem 2rem 0 0;
+}
